@@ -138,7 +138,7 @@ $(document).ready(function () {
     });
     function ktraten() {
         let ten = $("#ten").val();
-        let patten = /^([A-Z]{1}[a-z]*)$/;
+        let patten = /^([A-Z]{1}[a-z]*)(\s[A-Z]{1}[a-z]*)+$/;
         if (patten.test(ten)) {
             $("#erten").html("");
             $("#ten").removeClass("is-invalid");
@@ -155,7 +155,7 @@ $(document).ready(function () {
     });
     function ktrasdt() {
         let sdt = $("#sdt").val();
-        let patten = /^\d{1,12}$/;
+        let patten = /^(0[3|5|7|8|9])([0-9]{8})$/;
         if (patten.test(sdt)) {
             $("#ersdt").html("");
             $("#sdt").removeClass("is-invalid");
@@ -172,7 +172,7 @@ $(document).ready(function () {
     });
     function ktramail() {
         let mail = $("#email").val();
-        let patten = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let patten = /^[a-zA-Z0-9]+@[A-Za-z]+\.[a-zA-Z]{2,5}$/;
         if (patten.test(mail)) {
             $("#ermail").html("");
             $("#email").removeClass("is-invalid");
